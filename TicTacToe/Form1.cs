@@ -16,5 +16,25 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
+
+       
+        private void startGameMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void changeSizeMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Game was made Mateusz Błachacz", "About");
+        }
     }
 }
