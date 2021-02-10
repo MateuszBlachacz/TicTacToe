@@ -192,7 +192,7 @@ namespace TicTacToe
             // aboutMenuItem
             // 
             this.aboutMenuItem.Name = "aboutMenuItem";
-            this.aboutMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutMenuItem.Text = "About";
             this.aboutMenuItem.Click += new System.EventHandler(this.aboutMenuItem_Click);
             // 
@@ -204,6 +204,7 @@ namespace TicTacToe
             this.button1.Size = new System.Drawing.Size(35, 35);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button_click);
             // 
             // button2
             // 
@@ -213,6 +214,7 @@ namespace TicTacToe
             this.button2.Size = new System.Drawing.Size(35, 35);
             this.button2.TabIndex = 11;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button_click);
             // 
             // button3
             // 
@@ -222,6 +224,7 @@ namespace TicTacToe
             this.button3.Size = new System.Drawing.Size(35, 35);
             this.button3.TabIndex = 12;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button_click);
             // 
             // button4
             // 
@@ -357,6 +360,7 @@ namespace TicTacToe
             this.button18.Size = new System.Drawing.Size(35, 35);
             this.button18.TabIndex = 22;
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button_click);
             // 
             // button19
             // 
@@ -366,6 +370,7 @@ namespace TicTacToe
             this.button19.Size = new System.Drawing.Size(35, 35);
             this.button19.TabIndex = 21;
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button_click);
             // 
             // button20
             // 
@@ -375,6 +380,7 @@ namespace TicTacToe
             this.button20.Size = new System.Drawing.Size(35, 35);
             this.button20.TabIndex = 20;
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button_click);
             // 
             // button21
             // 
@@ -447,6 +453,7 @@ namespace TicTacToe
             this.button28.Size = new System.Drawing.Size(35, 35);
             this.button28.TabIndex = 32;
             this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button_click);
             // 
             // button29
             // 
@@ -456,6 +463,7 @@ namespace TicTacToe
             this.button29.Size = new System.Drawing.Size(35, 35);
             this.button29.TabIndex = 31;
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button_click);
             // 
             // button30
             // 
@@ -465,6 +473,7 @@ namespace TicTacToe
             this.button30.Size = new System.Drawing.Size(35, 35);
             this.button30.TabIndex = 30;
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button_click);
             // 
             // button31
             // 
