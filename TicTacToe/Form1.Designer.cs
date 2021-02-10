@@ -136,6 +136,7 @@ namespace TicTacToe
             this.button98 = new System.Windows.Forms.Button();
             this.button99 = new System.Windows.Forms.Button();
             this.button100 = new System.Windows.Forms.Button();
+            this.sizeLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1105,11 +1106,22 @@ namespace TicTacToe
             this.button100.TabIndex = 100;
             this.button100.UseVisualStyleBackColor = true;
             // 
+            // sizeLabel
+            // 
+            this.sizeLabel.AutoSize = true;
+            this.sizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.sizeLabel.Location = new System.Drawing.Point(21, 39);
+            this.sizeLabel.Name = "sizeLabel";
+            this.sizeLabel.Size = new System.Drawing.Size(86, 31);
+            this.sizeLabel.TabIndex = 110;
+            this.sizeLabel.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 567);
+            this.Controls.Add(this.sizeLabel);
             this.Controls.Add(this.button91);
             this.Controls.Add(this.button92);
             this.Controls.Add(this.button93);
@@ -1333,6 +1345,7 @@ namespace TicTacToe
         private System.Windows.Forms.Button button98;
         private System.Windows.Forms.Button button99;
         private System.Windows.Forms.Button button100;
+        private System.Windows.Forms.Label sizeLabel;
     }
 }
 

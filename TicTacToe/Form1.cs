@@ -13,10 +13,12 @@ namespace TicTacToe
     public partial class Form1 : Form
     {
         bool turn = true;// true = O turn; false = X turn 
+        int size = 10;
         Button clickedButton;
         public Form1()
         {
             InitializeComponent();
+            setSizeLabel();
         }
 
        
@@ -57,6 +59,11 @@ namespace TicTacToe
                 clickedButton.Text = "X";
             }
             turn = !turn;
+        }
+
+        private void setSizeLabel()
+        {
+            sizeLabel.Text = $"{size}x{size}";
         }
     }
 }
