@@ -198,7 +198,7 @@ namespace TicTacToe
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.Location = new System.Drawing.Point(62, 90);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 35);
@@ -208,7 +208,7 @@ namespace TicTacToe
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button2.Location = new System.Drawing.Point(103, 90);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(35, 35);
@@ -218,7 +218,7 @@ namespace TicTacToe
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button3.Location = new System.Drawing.Point(144, 90);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(35, 35);
@@ -354,7 +354,7 @@ namespace TicTacToe
             // 
             // button18
             // 
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button18.Location = new System.Drawing.Point(144, 131);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(35, 35);
@@ -364,7 +364,7 @@ namespace TicTacToe
             // 
             // button19
             // 
-            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button19.Location = new System.Drawing.Point(103, 131);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(35, 35);
@@ -374,7 +374,7 @@ namespace TicTacToe
             // 
             // button20
             // 
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button20.Location = new System.Drawing.Point(62, 131);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(35, 35);
@@ -447,7 +447,7 @@ namespace TicTacToe
             // 
             // button28
             // 
-            this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button28.Location = new System.Drawing.Point(144, 172);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(35, 35);
@@ -457,7 +457,7 @@ namespace TicTacToe
             // 
             // button29
             // 
-            this.button29.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button29.Location = new System.Drawing.Point(103, 172);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(35, 35);
@@ -467,7 +467,7 @@ namespace TicTacToe
             // 
             // button30
             // 
-            this.button30.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button30.Location = new System.Drawing.Point(62, 172);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(35, 35);
