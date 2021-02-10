@@ -1,7 +1,7 @@
 ﻿
 namespace TicTacToe
 {
-    partial class Form1
+    partial class Game
     {
         /// <summary>
         /// Wymagana zmienna projektanta.

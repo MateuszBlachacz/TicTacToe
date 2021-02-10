@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace TicTacToe
 {
-    public partial class Form1 : Form
+    public partial class Game : Form
     {
         bool turn = true;// true = O turn; false = X turn 
         int size = 10;
         Button clickedButton;
-        public Form1()
+        public Game()
         {
             InitializeComponent();
             setSizeLabel();
@@ -28,7 +28,8 @@ namespace TicTacToe
         }
         private void changeSizeMenuItem_Click(object sender, EventArgs e)
         {
-
+            
+            setSizeLabel();
         }
 
         private void exitMenuItem_Click(object sender, EventArgs e)
