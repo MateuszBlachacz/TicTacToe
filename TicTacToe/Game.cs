@@ -15,8 +15,8 @@ namespace TicTacToe
         Font fButoon = new Font("Microsoft Sans Serif", 18);
         Size sButton = new Size(50, 50);
 
-        int winX;
-        int winO;
+        int winX = 0;
+        int winO = 0;
 
         bool turn = true;// true = O turn; false = X turn 
         public int size = 10;
@@ -29,14 +29,29 @@ namespace TicTacToe
             InitializeComponent();
             setSizeLabel();
             drawPlayGround();
-            winO = 0;
-            winX = 0;
+            SetScore();
         }
 
        
         private void startGameMenuItem_Click(object sender, EventArgs e)
         {
+            size = 10;
+            turn = true;
+            fButoon = new Font("Microsoft Sans Serif", 18);
+            sButton = new Size(50, 50);
+            winX = 0;
+            winO = 0;
+            ResetPlayGround();
+            setSizeLabel();
+            drawPlayGround();
+            SetScore();
+        }
 
+        private void playOnceMoreMenuItem_Click(object sender, EventArgs e)
+        {
+            ResetPlayGround();
+            drawPlayGround();
+            SetScore();
         }
         private void changeSizeMenuItem_Click(object sender, EventArgs e)
         {
@@ -159,7 +174,9 @@ namespace TicTacToe
             if (win)
             {
                 stopGame();
-                MessageBox.Show($"Palyer Win : {(turn ? 'X': 'O')}");
+                int points = this.turn ? this.winX += 1 : this.winO += 1;
+                MessageBox.Show($"Palyer Win : {(turn ? 'X': 'O')} and have points {points}");
+                
             }
         }
 
@@ -292,6 +309,8 @@ namespace TicTacToe
         private void SetScore() { 
         
         }
+
+        
     }
 
 }

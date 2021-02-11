@@ -38,6 +38,7 @@ namespace TicTacToe
             this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sizeLabel = new System.Windows.Forms.Label();
             this.test = new System.Windows.Forms.Label();
+            this.playOnceMoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@ namespace TicTacToe
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startGameMenuItem,
+            this.playOnceMoreToolStripMenuItem,
             this.changeSizeMenuItem,
             this.exitMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -118,6 +120,13 @@ namespace TicTacToe
             this.test.TabIndex = 111;
             this.test.Text = "Test";
             // 
+            // playOnceMoreToolStripMenuItem
+            // 
+            this.playOnceMoreToolStripMenuItem.Name = "playOnceMoreToolStripMenuItem";
+            this.playOnceMoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.playOnceMoreToolStripMenuItem.Text = "PlayOnceMore";
+            this.playOnceMoreToolStripMenuItem.Click += new System.EventHandler(this.playOnceMoreMenuItem_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +159,7 @@ namespace TicTacToe
         private System.Windows.Forms.ToolStripMenuItem aboutMenuItem;
         private System.Windows.Forms.Label sizeLabel;
         private System.Windows.Forms.Label test;
+        private System.Windows.Forms.ToolStripMenuItem playOnceMoreToolStripMenuItem;
     }
 }
 
