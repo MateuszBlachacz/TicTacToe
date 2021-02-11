@@ -35,13 +35,13 @@ namespace TicTacToe
        
         private void startGameMenuItem_Click(object sender, EventArgs e)
         {
+            ResetPlayGround();
             size = 10;
             turn = true;
             fButoon = new Font("Microsoft Sans Serif", 18);
             sButton = new Size(50, 50);
             winX = 0;
             winO = 0;
-            ResetPlayGround();
             setSizeLabel();
             drawPlayGround();
             SetScore();
@@ -305,11 +305,10 @@ namespace TicTacToe
             }
         }
 
-        private void SetScore() { 
-        
+        private void SetScore() {
+            winOText.Text = winO.ToString();
+            winXText.Text = winX.ToString();
         }
-
-        
     }
 
 }

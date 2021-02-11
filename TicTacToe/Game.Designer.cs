@@ -38,6 +38,11 @@ namespace TicTacToe
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sizeLabel = new System.Windows.Forms.Label();
+            this.win = new System.Windows.Forms.Label();
+            this.winOLabel = new System.Windows.Forms.Label();
+            this.winXlabel = new System.Windows.Forms.Label();
+            this.winOText = new System.Windows.Forms.Label();
+            this.winXText = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,11 +121,66 @@ namespace TicTacToe
             this.sizeLabel.TabIndex = 110;
             this.sizeLabel.Text = "label1";
             // 
+            // win
+            // 
+            this.win.AutoSize = true;
+            this.win.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.win.Location = new System.Drawing.Point(358, 24);
+            this.win.Name = "win";
+            this.win.Size = new System.Drawing.Size(60, 31);
+            this.win.TabIndex = 111;
+            this.win.Text = "Win";
+            // 
+            // winOLabel
+            // 
+            this.winOLabel.AutoSize = true;
+            this.winOLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.winOLabel.Location = new System.Drawing.Point(274, 55);
+            this.winOLabel.Name = "winOLabel";
+            this.winOLabel.Size = new System.Drawing.Size(43, 31);
+            this.winOLabel.TabIndex = 112;
+            this.winOLabel.Text = "O:";
+            // 
+            // winXlabel
+            // 
+            this.winXlabel.AutoSize = true;
+            this.winXlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.winXlabel.Location = new System.Drawing.Point(389, 55);
+            this.winXlabel.Name = "winXlabel";
+            this.winXlabel.Size = new System.Drawing.Size(40, 31);
+            this.winXlabel.TabIndex = 113;
+            this.winXlabel.Text = "X:";
+            // 
+            // winOText
+            // 
+            this.winOText.AutoSize = true;
+            this.winOText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.winOText.Location = new System.Drawing.Point(336, 55);
+            this.winOText.Name = "winOText";
+            this.winOText.Size = new System.Drawing.Size(29, 31);
+            this.winOText.TabIndex = 114;
+            this.winOText.Text = "0";
+            // 
+            // winXText
+            // 
+            this.winXText.AutoSize = true;
+            this.winXText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.winXText.Location = new System.Drawing.Point(455, 55);
+            this.winXText.Name = "winXText";
+            this.winXText.Size = new System.Drawing.Size(29, 31);
+            this.winXText.TabIndex = 115;
+            this.winXText.Text = "0";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 712);
+            this.Controls.Add(this.winXText);
+            this.Controls.Add(this.winOText);
+            this.Controls.Add(this.winXlabel);
+            this.Controls.Add(this.winOLabel);
+            this.Controls.Add(this.win);
             this.Controls.Add(this.sizeLabel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -147,6 +207,11 @@ namespace TicTacToe
         private System.Windows.Forms.ToolStripMenuItem aboutMenuItem;
         private System.Windows.Forms.Label sizeLabel;
         private System.Windows.Forms.ToolStripMenuItem playOnceMoreToolStripMenuItem;
+        private System.Windows.Forms.Label win;
+        private System.Windows.Forms.Label winOLabel;
+        private System.Windows.Forms.Label winXlabel;
+        private System.Windows.Forms.Label winOText;
+        private System.Windows.Forms.Label winXText;
     }
 }
 
