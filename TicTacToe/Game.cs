@@ -15,6 +15,8 @@ namespace TicTacToe
         Font fButoon = new Font("Microsoft Sans Serif", 18);
         Size sButton = new Size(50, 50);
 
+        int winX;
+        int winO;
 
         bool turn = true;// true = O turn; false = X turn 
         public int size = 10;
@@ -27,6 +29,8 @@ namespace TicTacToe
             InitializeComponent();
             setSizeLabel();
             drawPlayGround();
+            winO = 0;
+            winX = 0;
         }
 
        
@@ -152,6 +156,11 @@ namespace TicTacToe
             bool win = checkHorizontal(positionX, positionY) || checkVertical(positionX,positionY) || checkDiag(positionX,positionY) || checkAntyDiag(positionX, positionY);
            
             test.Text = win.ToString();
+            if (win)
+            {
+                stopGame();
+                MessageBox.Show($"Palyer Win : {(turn ? 'X': 'O')}");
+            }
         }
 
         private bool checkHorizontal(int x, int y)
@@ -268,6 +277,20 @@ namespace TicTacToe
             if (toWin <= (count + mincount)) return true;
 
             return false;
+        }
+
+        private void stopGame() {
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    playGround[i, j].Enabled = false;
+                }
+            }
+        }
+
+        private void SetScore() { 
+        
         }
     }
 
