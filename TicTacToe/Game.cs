@@ -170,7 +170,6 @@ namespace TicTacToe
 
             bool win = checkHorizontal(positionX, positionY) || checkVertical(positionX,positionY) || checkDiag(positionX,positionY) || checkAntyDiag(positionX, positionY);
            
-            test.Text = win.ToString();
             if (win)
             {
                 stopGame();
@@ -203,7 +202,7 @@ namespace TicTacToe
                 else break;
 
             }
-            test.Text = $"{player} ex: {count} {mincount}";
+     
             if (toWin <= (count + mincount)) return true;
 
             return false;
@@ -232,7 +231,7 @@ namespace TicTacToe
                 else break;
                 
             }
-            test.Text = $"{player} ex: {count} {mincount}";
+        
             if (toWin <= (count + mincount)) return true;
 
             return false;
@@ -261,7 +260,7 @@ namespace TicTacToe
                 else break;
 
             }
-            test.Text = $"{player} ex: {count} {mincount}";
+         
             if (toWin <= (count + mincount)) return true;
 
             return false;
@@ -290,7 +289,7 @@ namespace TicTacToe
                 else break;
 
             }
-            test.Text = $"{player} ex: {count} {mincount}";
+            
             if (toWin <= (count + mincount)) return true;
 
             return false;
