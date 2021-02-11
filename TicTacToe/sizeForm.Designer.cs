@@ -32,8 +32,8 @@ namespace TicTacToe
             this.Cancel = new System.Windows.Forms.Button();
             this.ok = new System.Windows.Forms.Button();
             this.sizeLabel = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.sizeChange = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeChange)).BeginInit();
             this.SuspendLayout();
             // 
             // Cancel
@@ -44,6 +44,7 @@ namespace TicTacToe
             this.Cancel.TabIndex = 0;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // ok
             // 
@@ -53,6 +54,7 @@ namespace TicTacToe
             this.ok.TabIndex = 1;
             this.ok.Text = "Ok!";
             this.ok.UseVisualStyleBackColor = true;
+            this.ok.Click += new System.EventHandler(this.ok_Click);
             // 
             // sizeLabel
             // 
@@ -64,24 +66,24 @@ namespace TicTacToe
             this.sizeLabel.TabIndex = 3;
             this.sizeLabel.Text = "Size:";
             // 
-            // numericUpDown1
+            // sizeChange
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.numericUpDown1.Location = new System.Drawing.Point(64, 11);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.sizeChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.sizeChange.Location = new System.Drawing.Point(64, 11);
+            this.sizeChange.Maximum = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.sizeChange.Minimum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(62, 38);
-            this.numericUpDown1.TabIndex = 4;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.sizeChange.Name = "sizeChange";
+            this.sizeChange.Size = new System.Drawing.Size(62, 38);
+            this.sizeChange.TabIndex = 4;
+            this.sizeChange.Value = new decimal(new int[] {
             10,
             0,
             0,
@@ -92,7 +94,7 @@ namespace TicTacToe
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(233, 90);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.sizeChange);
             this.Controls.Add(this.sizeLabel);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.Cancel);
@@ -101,7 +103,7 @@ namespace TicTacToe
             this.Name = "sizeForm";
             this.ShowIcon = false;
             this.Text = "Change Size";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeChange)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +114,6 @@ namespace TicTacToe
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button ok;
         private System.Windows.Forms.Label sizeLabel;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown sizeChange;
     }
 }

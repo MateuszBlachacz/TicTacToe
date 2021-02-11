@@ -8,3 +8,4 @@ C:\Users\User\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCo
 C:\Users\User\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\User\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
 C:\Users\User\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Game.resources
+C:\Users\User\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.sizeForm.resources
