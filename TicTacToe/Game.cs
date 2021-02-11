@@ -60,15 +60,13 @@ namespace TicTacToe
 
         private void markTheGameField()
         {
-            if (turn)
-            {
-                clickedButton.Text = "O";
-            } 
-            else
-            {
-                clickedButton.Text = "X";
-            }
+            clickedButton.Text = getPlayer();
+
             turn = !turn;
+        }
+
+        private string  getPlayer() { 
+            return turn ? "O": "X";
         }
 
         public void setSizeLabel()
