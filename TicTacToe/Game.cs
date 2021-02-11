@@ -18,6 +18,7 @@ namespace TicTacToe
 
         bool turn = true;// true = O turn; false = X turn 
         public int size = 10;
+        private int toWin = 5;
         Button[,] playGround; 
         Button clickedButton;
 
@@ -148,51 +149,37 @@ namespace TicTacToe
             int positionX = position / size;
             int positionY = position % size;
 
-          //  checkHorizontal(positionX, positionY) ||
-            bool win =  checkVertical(positionX,positionY);
-
-           // test.Text = win.ToString();
+            bool win = checkHorizontal(positionX, positionY) || checkVertical(positionX,positionY) || checkDiag(positionX,positionY) || checkAntyDiag(positionX, positionY);
+           
+            test.Text = win.ToString();
         }
 
         private bool checkHorizontal(int x, int y)
         {
             string player = playGround[x, y].Text;
             int count = 0;
-            for (int i = 0; i<5; i++)
-            {   
-                if(y + i >= size)
-                {
-                    break;
-                }
-                else if (player == playGround[x, y + i].Text)
-                {
-                    count++;
-                   
-                }
-                else 
-                {
-                    break;
-                }
-            }
-            for (int i = 1; i < 5; i++)
+            int mincount = 0;
+            for (int i = 0; i < toWin; i++)
             {
-                if (y - i < 0)
-                {
-                    break;
-                }
-                else if (player == playGround[x, y - i].Text)
-                {
-                    count++;
-                   
-                }
-                else
-                {
-                    break;
-                }
+                if (count >= toWin) break;
+                if (y + i >= size) break;
+
+                if (player == playGround[x, y + i].Text) count++;
+                else break;
+
             }
-           
-            if (5 <= count) return true;
-            
+            for (int i = 1; i <= (toWin - count); i++)
+            {
+                if (count + mincount >= toWin) break;
+                if ((y - i) < 0) break;
+
+                if (player == playGround[x, y - i].Text) mincount++;
+                else break;
+
+            }
+            test.Text = $"{player} ex: {count} {mincount}";
+            if (toWin <= (count + mincount)) return true;
+
             return false;
         }
 
@@ -200,43 +187,88 @@ namespace TicTacToe
         {
             string player = playGround[x, y].Text;
             int count = 0;
-            for (int i = 0; i < 5; i++)
+            int mincount = 0;
+            for (int i = 0; i < toWin; i++)
             {
-                if (count >= 5) break;
-                if (x + i >= size)
-                {
-                    break;
-                }
-                else if (player == playGround[x + i, y].Text)
-                {
-                    count++;
+                if (count >= toWin) break;
+                if (x + i >= size) break;
 
-                }
-                else
-                {
-                    break;
-                }
+                if (player == playGround[x + i, y].Text) count++;
+                else break;
+                
             }
-            for (int i = count; i < 5 ; i++)
-            { if (count >= 5) break;
-                if (x - i < 0)
-                {
-                    break;
-                }
-                else if (player == playGround[x - 1, y].Text)
-                {
-                    count++;
+            for (int i = 1; i <= (toWin - count); i++)
+            {   
+                if (count + mincount >= toWin) break;
+                if ((x - i) < 0) break;
+                
+                if (player == playGround[x - i, y].Text) mincount++;
+                else break;
+                
+            }
+            test.Text = $"{player} ex: {count} {mincount}";
+            if (toWin <= (count + mincount)) return true;
 
-                }
-                else
-                {
-                    break;
-                }
+            return false;
+        }
+
+        private bool checkDiag(int x, int y)
+        {
+            string player = playGround[x, y].Text;
+            int count = 0;
+            int mincount = 0;
+            for (int i = 0; i < toWin; i++)
+            {
+                if (count >= toWin) break;
+                if (x + i >= size || y + i >= size) break;
+
+                if (player == playGround[x + i, y + i].Text) count++;
+                else break;
+
             }
-            test.Text = count.ToString();
-            if (5 <= count) return true;
+            for (int i = 1; i <= (toWin - count); i++)
+            {
+                if (count + mincount >= toWin) break;
+                if ((x - i) < 0 || y - i < 0) break;
+
+                if (player == playGround[x - i, y - i].Text) mincount++;
+                else break;
+
+            }
+            test.Text = $"{player} ex: {count} {mincount}";
+            if (toWin <= (count + mincount)) return true;
+
+            return false;
+        }
+        
+        private bool checkAntyDiag(int x, int y)
+        {
+            string player = playGround[x, y].Text;
+            int count = 0;
+            int mincount = 0;
+            for (int i = 0; i < toWin; i++)
+            {
+                if (count >= toWin) break;
+                if (x - i < 0 || y + i >= size) break;
+
+                if (player == playGround[x - i, y + i].Text) count++;
+                else break;
+
+            }
+            for (int i = 1; i <= (toWin - count); i++)
+            {
+                if (count + mincount >= toWin) break;
+                if ((x + i) >= size || y - i < 0) break;
+
+                if (player == playGround[x + i, y - i].Text) mincount++;
+                else break;
+
+            }
+            test.Text = $"{player} ex: {count} {mincount}";
+            if (toWin <= (count + mincount)) return true;
 
             return false;
         }
     }
+
 }
